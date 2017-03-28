@@ -1,4 +1,5 @@
-﻿using Contracts;
+﻿using ChildDependency;
+using Contracts;
 using System;
 
 namespace SomeDependency
@@ -7,7 +8,8 @@ namespace SomeDependency
     {
         public string DoSomething()
         {
-            return "Hello from Foo";
+            var bar = new Bar();
+            return "Hello from Foo and "  + bar.DoSomething();
         }
     }
 }

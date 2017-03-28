@@ -3,7 +3,9 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <PostBuildEvent>copy "$(SolutionDir)SomeDependency\bin\Debug\netcoreapp1.1\SomeDependency.dll" "$(SolutionDir)Host\bin\Debug\netcoreapp1.1\"</PostBuildEvent>
+    <PostBuildEvent>copy "c:\temp\AssemblyLoadingScratch\SomeDependency\bin\Debug\netcoreapp1.1\SomeDependency.dll" "c:\temp\AssemblyLoadingScratch\Host\bin\Debug\netcoreapp1.1\"
+copy "c:\temp\AssemblyLoadingScratch\ChildDependency\bin\Debug\netcoreapp1.1\ChildDependency.dll" "c:\temp\AssemblyLoadingScratch\Host\bin\Debug\netcoreapp1.1\"
+</PostBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
